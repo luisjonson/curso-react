@@ -3,12 +3,12 @@ import logo from './logo.svg';
 import './App.css';
 
 function App(props) {
-  const [usuario, setUsuario] = useState();
+  const [usuario, setUsuario] = useState('');
   return (
     <>
-    <p>{usuario}</p>
-      <h1>{props.title} {setUsuario}</h1>
-      <input placeholder="Usuário" className="usuarioInput" />
+
+      <h1> {usuario}</h1>
+      <input placeholder="Usuário" className="usuarioInput"value={usuario} onChange={e => setUsuario(e.target.value)} />
       <button type="button">Pesquisa</button>
     </>
   );
